@@ -1,0 +1,32 @@
+<div class="card" *ngIf="character && !cargando">
+    <div class="character-photo">
+        <img [src]="character.img" alt="">
+    </div>
+    <div class="character-info">
+        <div class="name-status">
+            <h3 class="character-name">{{character.name}}</h3>
+            <div class="status-info" [ngClass]="{
+                'alive': character.status === 'Alive',
+                'dead': character.status === 'Dead',
+                'unknown': character.status === 'unknown'
+            }">
+                <div class="led"></div>
+                <div class="status">
+                    <p>{{character.status}}</p>
+                </div>
+                <span>-</span>
+                <div class="specie">
+                    <p>{{character.species}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="location">
+            <h3>Last known location:</h3>
+            <p>{{character.location}}</p>
+        </div>
+        <div class="aparition">
+            <h3>First seen in:</h3>
+            <p>{{character.aparition}}</p>
+        </div>
+    </div>
+</div>

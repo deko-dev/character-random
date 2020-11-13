@@ -1,0 +1,16 @@
+<div class="container title">
+    <h3>Welcome to Character Random</h3>
+    <p>WebApp for to show a Character of Serie Animated Rick and Morty, Of shape random each 15 seconds</p>
+
+    <div class="loading" *ngIf="cargando">
+        <div class="circle c1"></div>
+        <div class="circle c2"></div>
+        <div class="circle c3"></div>
+    </div>
+
+    <app-character [character]="character" [cargando]="cargando">
+    </app-character>
+
+    <button *ngIf="!cargando" (click)="refresh()" class="btn">Refresh</button>
+
+</div>

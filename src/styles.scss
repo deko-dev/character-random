@@ -1,1 +1,184 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #53376F;
+    max-width: 100vw;
+    color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.container {
+    margin: 0px auto;
+    width: 80%;
+}
+
+.title {
+    text-align: center;
+    margin: 20px auto;
+    h3 {
+        font-size: 45px;
+        font-weight: 600;
+        margin: 0;
+    }
+    p {
+        display: inline-block;
+        width: 70%;
+        font-size: 25px;
+        font-weight: 300;
+        letter-spacing: 1px;
+    }
+}
+
+.card {
+    background-color: #163546;
+    width: 70%;
+    margin: 20px auto;
+    border-radius: 20px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    transition: .4s;
+    .character-photo {
+        flex: 0 1 calc(30% - 10px);
+        img {
+            border-radius: 10px;
+        }
+    }
+    .character-info {
+        text-align: left;
+        flex: 0 1 calc(60% - 10px);
+        .name-status {
+            margin-bottom: 20px;
+            .character-name {
+                font-size: 28px;
+                font-weight: 900;
+                letter-spacing: 1px;
+            }
+            .status-info {
+                width: 100%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                .led {
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 100%;
+                    margin-right: 10px;
+                }
+                .status p {
+                    width: auto;
+                    font-size: 20px;
+                    margin-right: 10px;
+                }
+                span {
+                    margin-right: 10px;
+                }
+                .specie p {
+                    width: auto;
+                    font-size: 20px;
+                }
+            }
+        }
+        .location,
+        .aparition {
+            margin-bottom: 20px;
+            h3 {
+                font-size: 25px;
+                color: gray;
+            }
+            p {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+.alive {
+    .led {
+        background-color: green;
+        box-shadow: 0px 0px 5px 2px green;
+    }
+    .status {
+        color: green;
+        text-shadow: 0px 0px 4px;
+    }
+}
+
+.dead {
+    .led {
+        background-color: red;
+        box-shadow: 0px 0px 5px 2px red;
+    }
+    .status {
+        color: red;
+        text-shadow: 0px 0px 4px;
+    }
+}
+
+.unknown {
+    .led {
+        background-color: gray;
+        box-shadow: 0px 0px 5px 2px gray;
+    }
+    .status {
+        color: gray;
+        text-shadow: 0px 0px 4px;
+    }
+}
+
+.btn {
+    border: none;
+    width: 180px;
+    height: 50px;
+    padding: 10px;
+    color: #fff;
+    background-color: #27BF7D;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .3s;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.btn:hover {
+    background-color: #3d584d;
+}
+
+.loading {
+    width: 30%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .circle {
+        width: 25px;
+        height: 25px;
+        border: 2px solid #27BF7D;
+        margin-right: 10px;
+    }
+    .c1 {
+        animation: girar 1s infinite .3s;
+    }
+    .c2 {
+        animation: girar 1s infinite .6s;
+    }
+    .c3 {
+        animation: girar 1s infinite .9s;
+    }
+    @keyframes girar {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+}

@@ -1,14 +1,15 @@
 import { Component, OnInit } from '@angular/core';
+import { CharacterService, Character } from '../../services/character.service';
 import { map } from 'rxjs/operators';
-import { CharacterService, Character } from './services/character.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss']
 })
-export class AppComponent implements OnInit {
+export class HomeComponent implements OnInit {
 
+  
   character : Character;
 
   cargando = false;
